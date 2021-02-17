@@ -10,11 +10,18 @@ console.log(mapArray);
 console.log('\n\n***my function***');
 
  let myMapArray = [];
-const myMapfunct = (array) => {
+const myMapfunct = (array, func) => {
+    let newTerm = 0
     for (let i = 0; i < array.length; i++) {
-        myMapArray = [...myMapArray, array[i] += 30];
+        newTerm = func(array[i]);
+        myMapArray = [...myMapArray, newTerm];
     };
     return myMapArray;
 };
 
-console.log(myMapfunct(myArray));
+const myFunction = (element) => {
+    const term = element + 30;
+    return term;
+}
+
+console.log(myMapfunct(myArray, myFunction));
