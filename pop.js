@@ -11,15 +11,19 @@ console.log(arr);
 // My Function
 console.log("****My function used****");
 
-function myPop(arr) {
-    const arrLength = arr.length -1;
-    const popValue = arr[arrLength];
+let arr2 = [1, 2, 3, 4];
+
+function myPop() {
+    const arrLength = arr2.length -1;
+    const popValue = arr2[arrLength];
     let newArr = [];
     for (let i = 0; i < arrLength; i++){
-        newArr = [...newArr, arr[i]];
+        newArr = [...newArr, arr2[i]];
     }
-    return [popValue, newArr];
+    arr2 = newArr;
+    return popValue;
 };
 
-const arr2 = [1, 2, 3, 4];
-console.log(myPop(arr2));
+
+console.log(myPop());
+console.log(arr2);
