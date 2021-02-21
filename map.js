@@ -7,6 +7,8 @@ console.log('***built in method***');
 const mapArray = myArray.map(element => element + 30);
 console.log(mapArray);
 
+
+// my function
 console.log('\n\n***my function***');
 
  let myMapArray = [];
